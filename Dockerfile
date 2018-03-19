@@ -14,4 +14,6 @@ RUN buildDeps="gcc python-dev" \
 
 EXPOSE 9272
 
-ENTRYPOINT ["vmware_exporter"]
+ADD entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
